@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เที่ยวไหนดี</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        nav {
+            background-color: #4CAF50;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: right;
+        }
+
+        nav li {
+            float: right;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #45a049;
+        }
+
+        section {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        article {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 45%; /* เปลี่ยนความกว้างเป็น 45% */
+            display: flex; /* ให้ส่วนข้อความแสดงผลแนบกับรูป */
+            flex-direction: column; /* จัดวางแนวตั้ง */
+        }
+
+        article img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 2px solid #ccc;
+        }
+
+        article h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        article p {
+            color: #555;
+        }
+
+        article:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+       <style>
+        article img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 2px solid #ccc; /* เพิ่มเส้นขอบ */
+        }
+        /* เส้นขอบรูปภาพ */
+article img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc; /* เพิ่มเส้นขอบ */
+}
+
+/* สีพื้นหลังและขนาดตัวหนังสือสำหรับชื่อสถานที่ท่องเที่ยว */
+article h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* สีข้อความคำอธิบาย */
+article p {
+    color: #555;
+}
+
+/* เพิ่มทองสีเมื่อโฮเวอร์ */
+article:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 600px) {
+    /* ปรับลำดับหรือขนาดขององค์ประกอบสำหรับหน้าจอที่เล็ก */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* ปรับลำดับหรือขนาดขององค์ประกอบสำหรับหน้าจอขนาดกลาง */
+}
+
+@media only screen and (min-width: 1025px) {
+    /* ปรับลำดับหรือขนาดขององค์ประกอบสำหรับหน้าจอขนาดใหญ่ */
+}
+
+    </style>
+     <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* จัดวางขอบเขตห่างกันทั้งซ้ายและขวา */
+        }
+
+        nav {
+            /* ส่วนของ CSS สำหรับ navigation bar ของคุณ */
+            background-color: #4CAF50;
+            overflow: hidden;
+        }
+
+        nav ul {
+            /* ส่วนของ CSS สำหรับ unordered list ภายใน navigation bar */
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: right;
+        }
+
+        nav li {
+            float: right;
+        }
+
+        nav a {
+            /* ส่วนของ CSS สำหรับ hyperlinks ภายใน navigation bar */
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #45a049;
+        }
+
+        section {
+            /* ส่วนของ CSS สำหรับข้อมูลหลักของเนื้อหา */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        article {
+            /* ส่วนของ CSS สำหรับส่วนเนื้อหาแต่ละบทความหรือสถานที่ท่องเที่ยว */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ส่วนอื่น ๆ ของ CSS ที่คุณมีอาจจะมีเพิ่มเติมตามที่จำเป็น */
+    </style>
+    <script async custom-element="amp-auto-ads"
+    src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+</head>
+<body>
+    <amp-auto-ads type="adsense"
+    data-ad-client="ca-pub-1686645941894621">
+</amp-auto-ads>
+    <nav>
+        <ul>
+            <li><a href="#home">หน้าแรก</a></li>
+            <li><a href="#about">เกี่ยวกับ</a></li>
+            <li><a href="#services">บริการ</a></li>
+            <li><a href="#contact">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <article>
+            <img src="c:\Users\mrcoc\OneDrive\เดสก์ท็อป\เว็บ\รูปภาพ\เขาใหญ่.jpg" alt="อุทยานเเห่งชาติเขาใหญ่">
+            <h3 style="color: #333;">1. อุทยานเเห่งชาติเขาใหญ่</h3>
+            <p>เอุทยานแห่งชาติเขาใหญ่เป็นที่รู้จักในภูมิภาคใต้ของประเทศไทยด้วยธรรมชาติที่สวยงามและความหลากหลายทางชีวภาพ. อุทยานนี้ครอบคลุมพื้นที่ที่มีป่าทึบ, น้ำตก, และเทือกเขาที่สูง. นอกจากนี้, อุทยานเขาใหญ่ยังเป็นที่ตั้งของถ้ำต่างๆ ที่น่าสนใจ.</p>
+        </article>
+
+        <article>
+            <img src="c:\Users\mrcoc\OneDrive\เดสก์ท็อป\เว็บ\รูปภาพ\ชายหาดทับแข้ง.jpg" alt="ชายหาดทับแข้ง">
+            <h3 style="color: #333;">2. ชายหาดทับแข้ง</h3>
+            <p>ชายหาดทับแข้ง เป็นหนึ่งในชายหาดที่ทำให้จังหวัดพังงาของประเทศไทยมีชื่อเสียงในด้านท่องเที่ยวทะเล. ทับแข้งตั้งอยู่ทางทิศตะวันตกของเมืองพังงา และห่างจากตัวเมืองไม่ไกล.</p>
+        </article>
+        <article>
+            <img src="c:\Users\mrcoc\OneDrive\เดสก์ท็อป\เว็บ\รูปภาพ\วัดพระธาตุดอยสุเทพ.jpg" alt="วัดพระธาตุดอยสุเทพ">
+            <h3 style="color: #333;">3. วัดพระธาตุดอยสุเทพ</h3>
+            <p>วัดพระธาตุดอยสุเทพ หรือ วัดดอยสุเทพราชวรวิหาร เป็นวัดที่ตั้งอยู่บนยอดเขาดอยสุเทพที่สูงที่สุดในเทือกเขาหลวงของภาคเหนือของประเทศไทย ในเขตเทศบาลนครเชียงใหม่. วัดนี้มีความสำคัญทางท่องเที่ยวและศาสนา.</p>
+        </article>
+<!-- เพิ่มสถานที่ท่องเที่ยวที่ 4 -->
+<article>
+    <img src="c:\Users\mrcoc\OneDrive\เดสก์ท็อป\เว็บ\รูปภาพ\เกาะไข่ จังหวัดพังงา.jpg" alt="เกาะไข่ จังหวัดพังงา 4">
+    <h3 style="color: #333;">4. เกาะไข่จังหวัดพังงา</h3>
+    <p>เกาะไข่: เกาะสวยในทะเลอันดามัน ทรายขาวละเอียด น้ำทะเลสดใส สถานที่ท่องเที่ยวทะเลที่น่าสนใจในจังหวัดชลบุรี, ประเทศไทย</p>
+</article>
+
+<!-- เพิ่มสถานที่ท่องเที่ยวที่ 5 -->
+<article>
+    <img src="c:\Users\mrcoc\OneDrive\เดสก์ท็อป\เว็บ\รูปภาพ\เมืองเก่า จังหวัดพระนครศรีอยุธยา.jpg" alt="เมืองเก่า จังหวัดพระนครศรีอยุธยา">
+    <h3 style="color: #333;">5. เมืองเก่าจังหวัดพระนครศรีอยุธยา</h3>
+    <p>จังหวัดพระนครศรีอยุธยาเป็นเมืองหลวงเก่าของประเทศไทย จึงหลงเหลือโบราณสถานและโบราณวัตถุรอบ ๆ เมือง โดยเฉพาะวัดวาอารามที่คงความงามทางประวัติศาสตร์เอาไว้ได้ ซึ่งอยุธยามีวัดหลายที่ และแต่ละที่ก็ใกล้กัน ขับรถไม่กี่นาทีก็ถึง เหมาะแก่การมาไหว้พระอยุธยา 9 วัดขอพรช่วงปีใหม่</p>
+</article>
+
+<!-- เพิ่มสถานที่ท่องเที่ยวที่ 6 -->
+<article>
+    <img src="c:\Users\mrcoc\OneDrive\เดสก์ท็อป\เว็บ\รูปภาพ\ถ้ำมรกต จังหวัดตรัง.jpg" alt="ถ้ำมรกตจังหวัดตรัง">
+    <h3 style="color: #333;">6. ถ้ำมรกตจังหวัดตรัง</h3>
+    <p>ถ้ำมรกตเป็นสถานที่ท่องเที่ยวที่น่าสนใจในจังหวัดตรัง ตั้งอยู่ในที่ที่มีธรรมชาติที่สวยงามและมีประวัติศาสตร์ที่น่าสนใจ. ถ้ำมรกตมีระบบถ้ำที่ซับซ้อนและเป็นที่อยู่ของตัวอย่างการเกิดหินปูนที่สวยงา</p>
+</article>
+
+<!-- เพิ่มสถานที่ท่องเที่ยวที่ 7 -->
+<article>
+    <img src="c:\Users\mrcoc\OneDrive\เดสก์ท็อป\เว็บ\รูปภาพ\ทุ่งทานตะวัน จังหวัดสระบุรี.jpeg" alt="ทุ่งทานตะวันจังหวัดสระบุรี">
+    <h3 style="color: #333;">7. ทุ่งทานตะวันจังหวัดสระบุรี</h3>
+    <p>ทุ่งทานตะวันในจังหวัดสระบุรีเป็นพื้นที่ที่มีทิวทัศน์ที่สวยงามและเป็นที่รู้จักในการท่องเที่ยว. ทุ่งทานตะวันเป็นทุ่งดอกทานตะวันที่กว้างใหญ่และสวยงามที่สามารถชมได้ตลอดทั้งฤดู</p>
+</article>
+
+<!-- เพิ่มสถานที่ท่องเที่ยวที่ 8 -->
+<article>
+    <img src="c:\Users\mrcoc\OneDrive\เดสก์ท็อป\เว็บ\รูปภาพ\สกายวอร์กอัยเยอร์เวง จังหวัดยะลา.jpeg" alt="สกายวอร์กอัยเยอร์เวงจังหวัดยะลา">
+    <h3 style="color: #333;">8. สกายวอร์กอัยเยอร์เวงจังหวัดยะลา</h3>
+    <p>ลงมาที่ดินแดนใต้สุดแดนสยามอย่างจังหวัดยะลา ที่นี่มีแหล่งท่องเที่ยวที่ไม่ควรพลาดอย่างทะเลหมอกอัยเยอร์เวง ความพิเศษคือยะลาไม่ได้อยู่เหนือแต่มีทะเลหมอก และทะเลหมอกนี้เกิดขึ้นตลอดทั้งปี เพราะอากาศบนจุดชมวิว หรือสกายวอร์กอัยเยอร์เวงหนาวเย็นตลอดทั้งปีนั่นเอง</p>
+</article>
+
+<!-- เพิ่มสถานที่ท่องเที่ยวที่ 9 -->
+<article>
+    <img src="c:\Users\mrcoc\OneDrive\เดสก์ท็อป\เว็บ\รูปภาพ\เขื่อนเชี่ยวหลาน จังหวัดสุราษฎร์ธานี.jpg" alt="เขื่อนเชี่ยวหลานจังหวัดสุราษฎร์ธานี">
+    <h3 style="color: #333;">9. เขื่อนเชี่ยวหลานจังหวัดสุราษฎร์ธานี</h3>
+    <p>
+        เขื่อนเชี่ยวหลาน (Cheow Lan Dam) ตั้งอยู่ในจังหวัดสุราษฎร์ธานี ประเทศไทย โดยเป็นเขื่อนที่สร้างขึ้นบนแม่น้ำคลองลาน (Khlong Saeng River) ซึ่งเป็นสายน้ำหลักในอุทยานแห่งชาติเขาสก อีกทั้งยังเป็นส่วนหนึ่งของอุทยานแห่งชาติเขาสก-นาขาม ซึ่งเป็นอุทยานแห่งชาติที่มีความหลากหลายทางชีวภาพและทิวทัศน์ที่สวยงาม.</p>
+</article>
+
+<!-- เพิ่มสถานที่ท่องเที่ยวที่ 10 -->
+<article>
+    <img src="c:\Users\mrcoc\OneDrive\เดสก์ท็อป\เว็บ\รูปภาพ\ภูทับเบิกจังหวัดเพชรบูรณ์.jpg" alt="ภูทับเบิกจังหวัดเพชรบูรณ์">
+    <h3 style="color: #333;">10. ภูทับเบิกจังหวัดเพชรบูรณ์</h3>
+    <p>
+        ภูทับเบิก คือ ภูเขาที่ตั้งอยู่ในจังหวัดเพชรบูรณ์ ในประเทศไทย. ความสูงของภูทับเบิกประมาณ 1,768 เมตรจากระดับน้ำทะเล. ภูทับเบิกมีทัศนศิลป์ทางธรรมชาติที่สวยงาม, มีที่ระบายลมดี, และมองเห็นวิวทิวทัศน์ที่สวยงามของทัศนียภาพรอบๆ.
+        
+        การเดินทางขึ้นไปยังภูทับเบิกมักจะต้องใช้เวลาและมีทางเข้าที่ท้าทาย แต่ทุกความพยายามจะคุ้มค่าเมื่อถึงบนได้ เนื่องจากจะได้สัมผัสกับบรรยากาศธรรมชาติที่สงบสุขและวิวทิวทัศน์ที่ยอดเยี่ยม.
+        
+        การท่องเที่ยวที่ภูทับเบิกมักจะเป็นกิจกรรมที่นักท่องเที่ยวชื่นชอบ เพื่อสัมผัสกับธรรมชาติที่สมบูรณ์แบบของพื้นที่นี้.</p>
+</article>
+<footer>
+    <p>&copy; 2024 เที่ยวไหนดี. All rights reserved.</p>
+</footer>

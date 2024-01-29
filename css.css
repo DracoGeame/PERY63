@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* เปลี่ยนสีพื้นหลังเป็นสีเทาอ่อน */
+    color: #333;
+}
+nav {
+    background-color: #4CAF50;
+    overflow: hidden;
+    padding: 10px; /* เพิ่ม padding เพื่อให้ Navigation Bar ดูสวยงามมากขึ้น */
+}
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #45a049;
+}
+article {
+    background-color: #fff; /* เปลี่ยนสีพื้นหลังของแต่ละ Article เป็นสีขาว */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 30%;
+}
+#commentsSection {
+    margin-top: 20px;
+    background-color: #f8f8f8; /* เปลี่ยนสีพื้นหลังของ Comment Section เป็นสีเทาอ่อน */
+    padding: 20px;
+    border-radius: 8px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#reviewForm {
+    margin-bottom: 20px;
+    text-align: center; /* จัดตำแหน่งกลางของ Form */
+}
+
+#reviewForm label,
+#reviewForm textarea {
+    display: block;
+    margin: 10px 0;
+}
+
+#reviewForm textarea {
+    width: 100%;
+}
+
+#reviewForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#commentsSection {
+    margin-top: 20px;
+    background-color: #f8f8f8; /* เปลี่ยนสีพื้นหลังของ Comment Section เป็นสีเทาอ่อน */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#commentsSection div {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff; /* เปลี่ยนสีพื้นหลังของแต่ละ Comment เป็นสีขาว */
+    border-radius: 4px;
+}
